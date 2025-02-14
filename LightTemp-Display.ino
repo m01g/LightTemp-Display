@@ -16,7 +16,8 @@ void setup() {
   //serial begin
   Serial.begin(9600);
 
-  // tempratuur sensor opstarten
+  // Temperatuursensor opstarten
+
   pinMode(temperatuurPin, INPUT);
 
   // lcd opstarten
@@ -30,7 +31,8 @@ void setup() {
 }
 
 void loop() {
-  // lees de licht sensor uit
+  // Lees de lichtsensor uit
+
   float lux = lightMeter.readLightLevel();
 
   // bereken de temperatuur voor de LM335
@@ -38,16 +40,17 @@ void loop() {
   voltageOut = (sensorValue * 5000) / 4095;
   temperatuurC = (voltageOut / 10) - 273;
 
-// print op lcd
+  //  Print op LCD
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Licht: " + String(lux));
   lcd.setCursor(0, 1);
   lcd.print("Temp: " + String(temperatuurC));
 
-//serial print
+  //serial print
   Serial.println("Light: " + String(lux));
-  Serial.println("temperatuur: " + String(temperatuurC) + " | " + "volt uit(mV): " + String(voltageOut));
+  Serial.println("Temperatuur: " + String(temperatuurC) + " | " + "Voltage uit (mV): " + String(voltageOut));
+
 
   delay(1000);
 }
