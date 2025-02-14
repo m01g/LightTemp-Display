@@ -3,7 +3,8 @@ lichtsensor en tempratuursensor laten zien op een lcd_ic2 via een Esp32 Mini D1
 
 Instalatie schema:
 A0 = Io34
-![image](https://github.com/user-attachments/assets/66f53b4b-aee5-47d3-ad77-53db15692734)
+![image](https://github.com/user-attachments/assets/3e12f8a1-8294-41ee-90c7-c1f66cbc4d8b)
+
 
 
 Werking: 
